@@ -1,0 +1,40 @@
+{
+  "name": "subway",
+  "version": "1.0.0",
+  "description": "food chain UI",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "watchify -o js/bundle.js -v -d .",
+    "build": "browserify . | uglifyjs -cm > js/bundle.min.js"
+  },
+  "dependencies": {
+    "envify": "^3.4.1",
+    "fbjs": "^0.8.3",
+    "flux": "^2.1.1",
+    "react": "^15.2.1",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "browserify": "~13.0.1",
+    "react-dom": "^15.2.1",
+    "reactify": "^1.1.1",
+    "watchify": "~2.1.0"
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deeptanshu13/subway.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deeptanshu13/subway/issues"
+  },
+  "homepage": "https://github.com/deeptanshu13/subway#readme"
+}
